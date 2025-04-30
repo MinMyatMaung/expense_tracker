@@ -12,7 +12,7 @@ def summary_click():
     print("summary")
     
 def exit_click():
-    print("exit")
+    window.destroy()
 
 window = Tk()
 add_button = Button(window, text="Add Expense")
@@ -25,7 +25,7 @@ summary_button = Button(window, text="View Summary")
 summary_button.config(command=summary_click)
 
 exit_button = Button(window, text="Exit")
-exit_button.config(command=exit_button)
+exit_button.config(command=exit_click)
 
 add_button.pack()
 view_button.pack()
