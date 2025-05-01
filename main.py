@@ -3,7 +3,13 @@ from tkinter import messagebox
 
 
 def add_click():
-    print("add")
+    add_window=Toplevel()
+    add_window.title("Add New Expense")
+
+    Label(add_window, text="Description").pack(pady=5)
+    date_entry = Entry(add_window, width=30)
+    date_entry.pack(pady=5)
+
 
 def view_click():
     print("view")
@@ -15,6 +21,7 @@ def exit_click():
     window.destroy()
 
 window = Tk()
+window.title("Expense Tracker")
 add_button = Button(window, text="Add Expense")
 add_button.config(command=add_click)
 
